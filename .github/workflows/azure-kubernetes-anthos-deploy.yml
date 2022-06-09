@@ -110,7 +110,9 @@ jobs:
       contents: read
       id-token: write
     runs-on: ubuntu-latest
-    environment: stage
+    environment: 
+      name: stage
+      url: https://stage.52.152.197.60.nip.io
     # needs: [buildImage, createSecret]
     steps:
     # Checks out the repository this file is in
@@ -145,7 +147,9 @@ jobs:
       contents: read
       id-token: write
     runs-on: ubuntu-latest
-    environment: production
+    environment: 
+       name: production
+       url: https://52.152.197.60.nip.io
     # needs: [buildImage, createSecret]
     steps:
     # Checks out the repository this file is in

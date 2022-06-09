@@ -11,9 +11,20 @@ spec:
   tls:
   - hosts:
       - 52.152.197.60.nip.io
+      - stage.52.152.197.60.nip.io
     secretName: testsecret-tls
   rules:
-  - host: 52.152.197.60.nip.io
+  - host: stage.52.152.197.60.nip.io  
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
+  - host: 52.152.197.60.nip.io  
     http:
       paths:
       - path: /
@@ -29,5 +40,6 @@ spec:
 #   - hosts:
 #       - 52.186.163.22.nip.io
 #     secretName: testsecret-t
+ 
  
  
