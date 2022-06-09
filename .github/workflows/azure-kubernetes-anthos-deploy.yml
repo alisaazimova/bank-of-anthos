@@ -153,7 +153,7 @@ jobs:
           ${{ env.DEPLOYMENT_MANIFEST_PATH }}
 
   DeployProduction:
-    if: github.event.ref == 'refs/heads/stage'
+    if: github.event.ref == 'refs/heads/main'
     permissions:
       actions: read
       contents: read
