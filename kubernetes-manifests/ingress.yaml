@@ -10,10 +10,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - 20.88.191.120.nip.io
+      - 52.152.197.60.nip.io
     secretName: testsecret-tls
   rules:
-  - host: 20.88.191.120.nip.io
+  - host: 52.152.197.60.nip.io
     http:
       paths:
       - path: /
