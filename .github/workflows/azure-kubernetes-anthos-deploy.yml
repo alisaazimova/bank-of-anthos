@@ -124,6 +124,14 @@ jobs:
       uses: azure/login@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
+    
+    - name: Perform Scan
+      uses: ShiftLeftSecurity/scan-action@master
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: reports
+        path: reports
       
     # Retrieves your Azure Kubernetes Service cluster's kubeconfig file
     - name: Get K8s context
