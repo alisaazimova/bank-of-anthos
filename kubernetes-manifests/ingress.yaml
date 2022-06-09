@@ -14,16 +14,6 @@ spec:
       - stage.52.152.197.60.nip.io
     secretName: testsecret-tls
   rules:
-  - host: {{ . }}  
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: frontend
-            port:
-              number: 80
   - host: 52.152.197.60.nip.io  
     http:
       paths:
