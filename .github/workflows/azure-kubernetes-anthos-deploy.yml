@@ -37,7 +37,7 @@ on:
 env:
   # AZURE_CONTAINER_REGISTRY: "demoprojectanthos.azurecr.io"
   # CONTAINER_NAME: "bankofanthos"
-  RESOURCE_GROUP: "demo-project-group"
+  RESOURCE_GROUP: "demo-porject-group"
   CLUSTER_NAME: "demo-group-project"
   # IMAGE_PULL_SECRET_NAME: "anthosdemopullsecret"
   DEPLOYMENT_MANIFEST_PATH: "kubernetes-manifests"
@@ -112,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: staging
-      url: https://stage.52.152.197.60.nip.io
+      url: https://stage.20.121.149.225.nip.io
        
     # needs: [buildImage, createSecret]
     steps:
@@ -161,7 +161,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: production
-      url: https://52.152.197.60.nip.io
+      url: https://20.121.149.225.nip.io
 
     # needs: [buildImage, createSecret]
     steps:
