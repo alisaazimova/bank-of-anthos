@@ -116,7 +116,7 @@ jobs:
        
     # needs: [buildImage, createSecret]
     steps:
-    # Checks out the repository this file is in
+    # Checks out the repository this file is i
     - uses: actions/checkout@v3
     
     # Logs in with your Azure credentials
